@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="gymModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="gymModelStoreContainer">
+          <EntitySet Name="administrator" EntityType="gymModel.Store.administrator" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="branch" EntityType="gymModel.Store.branch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="class" EntityType="gymModel.Store.class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="class_review" EntityType="gymModel.Store.class_review" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="class_timetable" EntityType="gymModel.Store.class_timetable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="class_type" EntityType="gymModel.Store.class_type" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="coach" EntityType="gymModel.Store.coach" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="coach_speciality" EntityType="gymModel.Store.coach_speciality" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="coach_timetable" EntityType="gymModel.Store.coach_timetable" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="customer" EntityType="gymModel.Store.customer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="customer_pay_class" EntityType="gymModel.Store.customer_pay_class" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="fitness_information" EntityType="gymModel.Store.fitness_information" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="floor_coach" EntityType="gymModel.Store.floor_coach" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="guest" EntityType="gymModel.Store.guest" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="member" EntityType="gymModel.Store.member" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="payment" EntityType="gymModel.Store.payment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="person" EntityType="gymModel.Store.person" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="person_phonenumber" EntityType="gymModel.Store.person_phonenumber" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="private_coach" EntityType="gymModel.Store.private_coach" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="receptionist" EntityType="gymModel.Store.receptionist" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="review" EntityType="gymModel.Store.review" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="staff" EntityType="gymModel.Store.staff" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="timetable" EntityType="gymModel.Store.timetable" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__administr__admin__286302EC" Association="gymModel.Store.FK__administr__admin__286302EC">
+            <End Role="staff" EntitySet="staff" />
+            <End Role="administrator" EntitySet="administrator" />
+          </AssociationSet>
+          <AssociationSet Name="FK__class__coach_id__5535A963" Association="gymModel.Store.FK__class__coach_id__5535A963">
+            <End Role="coach" EntitySet="coach" />
+            <End Role="class" EntitySet="class" />
+          </AssociationSet>
+          <AssociationSet Name="FK__class_rev__custo__60A75C0F" Association="gymModel.Store.FK__class_rev__custo__60A75C0F">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coach__coach_id__22AA2996" Association="gymModel.Store.FK__coach__coach_id__22AA2996">
+            <End Role="staff" EntitySet="staff" />
+            <End Role="coach" EntitySet="coach" />
+          </AssociationSet>
+          <AssociationSet Name="FK__customer__custom__164452B1" Association="gymModel.Store.FK__customer__custom__164452B1">
+            <End Role="person" EntitySet="person" />
+            <End Role="customer" EntitySet="customer" />
+          </AssociationSet>
+          <AssociationSet Name="FK__fitness_i__membe__412EB0B6" Association="gymModel.Store.FK__fitness_i__membe__412EB0B6">
+            <End Role="member" EntitySet="member" />
+            <End Role="fitness_information" EntitySet="fitness_information" />
+          </AssociationSet>
+          <AssociationSet Name="FK__floor_coa__floor__2B3F6F97" Association="gymModel.Store.FK__floor_coa__floor__2B3F6F97">
+            <End Role="coach" EntitySet="coach" />
+            <End Role="floor_coach" EntitySet="floor_coach" />
+          </AssociationSet>
+          <AssociationSet Name="FK__guest__guest_id__1A14E395" Association="gymModel.Store.FK__guest__guest_id__1A14E395">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="guest" EntitySet="guest" />
+          </AssociationSet>
+          <AssociationSet Name="FK__member__member_i__1CF15040" Association="gymModel.Store.FK__member__member_i__1CF15040">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment__custome__4AB81AF0" Association="gymModel.Store.FK__payment__custome__4AB81AF0">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="payment" EntitySet="payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment__Recepti__49C3F6B7" Association="gymModel.Store.FK__payment__Recepti__49C3F6B7">
+            <End Role="receptionist" EntitySet="receptionist" />
+            <End Role="payment" EntitySet="payment" />
+          </AssociationSet>
+          <AssociationSet Name="FK__person_ph__perso__1FCDBCEB" Association="gymModel.Store.FK__person_ph__perso__1FCDBCEB">
+            <End Role="person" EntitySet="person" />
+            <End Role="person_phonenumber" EntitySet="person_phonenumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK__private_c__priva__2E1BDC42" Association="gymModel.Store.FK__private_c__priva__2E1BDC42">
+            <End Role="coach" EntitySet="coach" />
+            <End Role="private_coach" EntitySet="private_coach" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reception__recep__25869641" Association="gymModel.Store.FK__reception__recep__25869641">
+            <End Role="staff" EntitySet="staff" />
+            <End Role="receptionist" EntitySet="receptionist" />
+          </AssociationSet>
+          <AssociationSet Name="FK__staff__staff_id__1367E606" Association="gymModel.Store.FK__staff__staff_id__1367E606">
+            <End Role="person" EntitySet="person" />
+            <End Role="staff" EntitySet="staff" />
+          </AssociationSet>
+          <AssociationSet Name="fk_admin_id" Association="gymModel.Store.fk_admin_id">
+            <End Role="administrator" EntitySet="administrator" />
+            <End Role="branch" EntitySet="branch" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id" Association="gymModel.Store.fk_class_id">
+            <End Role="class" EntitySet="class" />
+            <End Role="class_timetable" EntitySet="class_timetable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id_2" Association="gymModel.Store.fk_class_id_2">
+            <End Role="class" EntitySet="class" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id_3" Association="gymModel.Store.fk_class_id_3">
+            <End Role="class" EntitySet="class" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id2" Association="gymModel.Store.fk_class_id2">
+            <End Role="class" EntitySet="class" />
+            <End Role="class_type" EntitySet="class_type" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_review_id" Association="gymModel.Store.fk_class_review_id">
+            <End Role="review" EntitySet="review" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="fk_coach" Association="gymModel.Store.fk_coach">
+            <End Role="private_coach" EntitySet="private_coach" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+          <AssociationSet Name="fk_coach_id" Association="gymModel.Store.fk_coach_id">
+            <End Role="coach" EntitySet="coach" />
+            <End Role="coach_speciality" EntitySet="coach_speciality" />
+          </AssociationSet>
+          <AssociationSet Name="fk_customer_id" Association="gymModel.Store.fk_customer_id">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="fk_payment_id" Association="gymModel.Store.fk_payment_id">
+            <End Role="payment" EntitySet="payment" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="fk_receptionist" Association="gymModel.Store.fk_receptionist">
+            <End Role="receptionist" EntitySet="receptionist" />
+            <End Role="member" EntitySet="member" />
+          </AssociationSet>
+          <AssociationSet Name="fk_timetable_id" Association="gymModel.Store.fk_timetable_id">
+            <End Role="timetable" EntitySet="timetable" />
+            <End Role="class_timetable" EntitySet="class_timetable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_timetable_id_2" Association="gymModel.Store.fk_timetable_id_2">
+            <End Role="timetable" EntitySet="timetable" />
+            <End Role="coach_timetable" EntitySet="coach_timetable" />
+          </AssociationSet>
+          <AssociationSet Name="fk_timetable_id_3" Association="gymModel.Store.fk_timetable_id_3">
+            <End Role="private_coach" EntitySet="private_coach" />
+            <End Role="coach_timetable" EntitySet="coach_timetable" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="administrator">
+          <Key>
+            <PropertyRef Name="admin_id" />
+          </Key>
+          <Property Name="admin_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="branch">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="int" Nullable="false" />
+          <Property Name="branch_name" Type="varchar" MaxLength="50" />
+          <Property Name="city" Type="varchar" MaxLength="50" />
+          <Property Name="street" Type="varchar" MaxLength="50" />
+          <Property Name="admin_id" Type="int" />
+        </EntityType>
+        <EntityType Name="class">
+          <Key>
+            <PropertyRef Name="class_id" />
+          </Key>
+          <Property Name="class_id" Type="int" Nullable="false" />
+          <Property Name="capacity" Type="int" />
+          <Property Name="class_level" Type="varchar" MaxLength="50" />
+          <Property Name="coach_id" Type="int" />
+          <Property Name="class_name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="class_review">
+          <Key>
+            <PropertyRef Name="class_review_id" />
+          </Key>
+          <Property Name="class_review_id" Type="int" Nullable="false" />
+          <Property Name="class_id" Type="int" />
+          <Property Name="customer_id" Type="int" />
+        </EntityType>
+        <EntityType Name="class_timetable">
+          <Key>
+            <PropertyRef Name="class_id" />
+            <PropertyRef Name="timetable_id" />
+          </Key>
+          <Property Name="class_id" Type="int" Nullable="false" />
+          <Property Name="timetable_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="class_type">
+          <Key>
+            <PropertyRef Name="class_id" />
+            <PropertyRef Name="class_type" />
+          </Key>
+          <Property Name="class_id" Type="int" Nullable="false" />
+          <Property Name="class_type" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="coach">
+          <Key>
+            <PropertyRef Name="coach_id" />
+          </Key>
+          <Property Name="coach_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="coach_speciality">
+          <Key>
+            <PropertyRef Name="coach_id" />
+            <PropertyRef Name="speciality" />
+          </Key>
+          <Property Name="coach_id" Type="int" Nullable="false" />
+          <Property Name="speciality" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="coach_timetable">
+          <Key>
+            <PropertyRef Name="private_coach_id" />
+            <PropertyRef Name="timetable_id" />
+          </Key>
+          <Property Name="private_coach_id" Type="int" Nullable="false" />
+          <Property Name="timetable_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="customer_type" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="customer_pay_class">
+          <Key>
+            <PropertyRef Name="customer_id" />
+            <PropertyRef Name="class_id" />
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="customer_id" Type="int" Nullable="false" />
+          <Property Name="class_id" Type="int" Nullable="false" />
+          <Property Name="payment_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="fitness_information">
+          <Key>
+            <PropertyRef Name="info_id" />
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Name="info_id" Type="int" Nullable="false" />
+          <Property Name="weight_" Type="int" />
+          <Property Name="height" Type="int" />
+          <Property Name="goal_weight" Type="int" />
+          <Property Name="member_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="floor_coach">
+          <Key>
+            <PropertyRef Name="floor_coach_id" />
+          </Key>
+          <Property Name="floor_coach_id" Type="int" Nullable="false" />
+          <Property Name="salary" Type="int" />
+        </EntityType>
+        <EntityType Name="guest">
+          <Key>
+            <PropertyRef Name="guest_id" />
+          </Key>
+          <Property Name="guest_id" Type="int" Nullable="false" />
+          <Property Name="guest_source" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Name="member_id" Type="int" Nullable="false" />
+          <Property Name="membership_start_date" Type="date" />
+          <Property Name="membership_end_date" Type="date" />
+          <Property Name="membership_renewable" Type="bit" />
+          <Property Name="membership_type" Type="varchar" MaxLength="50" />
+          <Property Name="membership_cost" Type="int" />
+          <Property Name="private_coach_id" Type="int" />
+          <Property Name="Receptionist_id" Type="int" />
+        </EntityType>
+        <EntityType Name="payment">
+          <Key>
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="payment_id" Type="int" Nullable="false" />
+          <Property Name="method" Type="varchar" MaxLength="50" />
+          <Property Name="date_" Type="date" />
+          <Property Name="amount" Type="real" />
+          <Property Name="Receptionist_id" Type="int" />
+          <Property Name="customer_id" Type="int" />
+        </EntityType>
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="int" Nullable="false" />
+          <Property Name="gender" Type="varchar" MaxLength="30" />
+          <Property Name="passwordd" Type="varchar" MaxLength="40" />
+          <Property Name="email" Type="varchar" MaxLength="40" />
+          <Property Name="city" Type="varchar" MaxLength="40" />
+          <Property Name="street" Type="varchar" MaxLength="40" />
+          <Property Name="first_name" Type="varchar" MaxLength="40" />
+          <Property Name="last_name" Type="varchar" MaxLength="40" />
+          <Property Name="birthdate" Type="date" />
+          <Property Name="person_type" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="person_phonenumber">
+          <Key>
+            <PropertyRef Name="person_id" />
+            <PropertyRef Name="phonenumber" />
+          </Key>
+          <Property Name="person_id" Type="int" Nullable="false" />
+          <Property Name="phonenumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="private_coach">
+          <Key>
+            <PropertyRef Name="private_coach_id" />
+          </Key>
+          <Property Name="private_coach_id" Type="int" Nullable="false" />
+          <Property Name="session_price" Type="int" />
+        </EntityType>
+        <EntityType Name="receptionist">
+          <Key>
+            <PropertyRef Name="receptionist_id" />
+          </Key>
+          <Property Name="receptionist_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="review">
+          <Key>
+            <PropertyRef Name="review_id" />
+          </Key>
+          <Property Name="review_id" Type="int" Nullable="false" />
+          <Property Name="rating" Type="int" />
+          <Property Name="comment" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staff_id" />
+          </Key>
+          <Property Name="staff_id" Type="int" Nullable="false" />
+          <Property Name="role" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="timetable">
+          <Key>
+            <PropertyRef Name="timetable_id" />
+          </Key>
+          <Property Name="timetable_id" Type="int" Nullable="false" />
+          <Property Name="next_date" Type="date" />
+          <Property Name="week_day" Type="varchar" MaxLength="50" />
+          <Property Name="start_time" Type="varchar" MaxLength="50" />
+          <Property Name="end_time" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__administr__admin__286302EC">
+          <End Role="staff" Type="gymModel.Store.staff" Multiplicity="1" />
+          <End Role="administrator" Type="gymModel.Store.administrator" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="administrator">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__class__coach_id__5535A963">
+          <End Role="coach" Type="gymModel.Store.coach" Multiplicity="0..1" />
+          <End Role="class" Type="gymModel.Store.class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="class">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__class_rev__custo__60A75C0F">
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="0..1" />
+          <End Role="class_review" Type="gymModel.Store.class_review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coach__coach_id__22AA2996">
+          <End Role="staff" Type="gymModel.Store.staff" Multiplicity="1" />
+          <End Role="coach" Type="gymModel.Store.coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__customer__custom__164452B1">
+          <End Role="person" Type="gymModel.Store.person" Multiplicity="1" />
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__fitness_i__membe__412EB0B6">
+          <End Role="member" Type="gymModel.Store.member" Multiplicity="1" />
+          <End Role="fitness_information" Type="gymModel.Store.fitness_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="member_id" />
+            </Principal>
+            <Dependent Role="fitness_information">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__floor_coa__floor__2B3F6F97">
+          <End Role="coach" Type="gymModel.Store.coach" Multiplicity="1" />
+          <End Role="floor_coach" Type="gymModel.Store.floor_coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="floor_coach">
+              <PropertyRef Name="floor_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__guest__guest_id__1A14E395">
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="1" />
+          <End Role="guest" Type="gymModel.Store.guest" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="guest">
+              <PropertyRef Name="guest_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__member__member_i__1CF15040">
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="1" />
+          <End Role="member" Type="gymModel.Store.member" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment__custome__4AB81AF0">
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="0..1" />
+          <End Role="payment" Type="gymModel.Store.payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="payment">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment__Recepti__49C3F6B7">
+          <End Role="receptionist" Type="gymModel.Store.receptionist" Multiplicity="0..1" />
+          <End Role="payment" Type="gymModel.Store.payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Principal>
+            <Dependent Role="payment">
+              <PropertyRef Name="Receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__person_ph__perso__1FCDBCEB">
+          <End Role="person" Type="gymModel.Store.person" Multiplicity="1" />
+          <End Role="person_phonenumber" Type="gymModel.Store.person_phonenumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="person_phonenumber">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__private_c__priva__2E1BDC42">
+          <End Role="coach" Type="gymModel.Store.coach" Multiplicity="1" />
+          <End Role="private_coach" Type="gymModel.Store.private_coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="private_coach">
+              <PropertyRef Name="private_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__reception__recep__25869641">
+          <End Role="staff" Type="gymModel.Store.staff" Multiplicity="1" />
+          <End Role="receptionist" Type="gymModel.Store.receptionist" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__staff__staff_id__1367E606">
+          <End Role="person" Type="gymModel.Store.person" Multiplicity="1" />
+          <End Role="staff" Type="gymModel.Store.staff" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_admin_id">
+          <End Role="administrator" Type="gymModel.Store.administrator" Multiplicity="0..1" />
+          <End Role="branch" Type="gymModel.Store.branch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="administrator">
+              <PropertyRef Name="admin_id" />
+            </Principal>
+            <Dependent Role="branch">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id">
+          <End Role="class" Type="gymModel.Store.class" Multiplicity="1" />
+          <End Role="class_timetable" Type="gymModel.Store.class_timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="class_timetable">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id_2">
+          <End Role="class" Type="gymModel.Store.class" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.Store.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id_3">
+          <End Role="class" Type="gymModel.Store.class" Multiplicity="0..1" />
+          <End Role="class_review" Type="gymModel.Store.class_review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id2">
+          <End Role="class" Type="gymModel.Store.class" Multiplicity="1" />
+          <End Role="class_type" Type="gymModel.Store.class_type" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="class_type">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_review_id">
+          <End Role="review" Type="gymModel.Store.review" Multiplicity="1" />
+          <End Role="class_review" Type="gymModel.Store.class_review" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="review">
+              <PropertyRef Name="review_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="class_review_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_coach">
+          <End Role="private_coach" Type="gymModel.Store.private_coach" Multiplicity="0..1" />
+          <End Role="member" Type="gymModel.Store.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="private_coach">
+              <PropertyRef Name="private_coach_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="private_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_coach_id">
+          <End Role="coach" Type="gymModel.Store.coach" Multiplicity="1" />
+          <End Role="coach_speciality" Type="gymModel.Store.coach_speciality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="coach_speciality">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_customer_id">
+          <End Role="customer" Type="gymModel.Store.customer" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.Store.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_payment_id">
+          <End Role="payment" Type="gymModel.Store.payment" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.Store.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="payment">
+              <PropertyRef Name="payment_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="payment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_receptionist">
+          <End Role="receptionist" Type="gymModel.Store.receptionist" Multiplicity="0..1" />
+          <End Role="member" Type="gymModel.Store.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="Receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_timetable_id">
+          <End Role="timetable" Type="gymModel.Store.timetable" Multiplicity="1" />
+          <End Role="class_timetable" Type="gymModel.Store.class_timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="timetable">
+              <PropertyRef Name="timetable_id" />
+            </Principal>
+            <Dependent Role="class_timetable">
+              <PropertyRef Name="timetable_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_timetable_id_2">
+          <End Role="timetable" Type="gymModel.Store.timetable" Multiplicity="1" />
+          <End Role="coach_timetable" Type="gymModel.Store.coach_timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="timetable">
+              <PropertyRef Name="timetable_id" />
+            </Principal>
+            <Dependent Role="coach_timetable">
+              <PropertyRef Name="timetable_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_timetable_id_3">
+          <End Role="private_coach" Type="gymModel.Store.private_coach" Multiplicity="1" />
+          <End Role="coach_timetable" Type="gymModel.Store.coach_timetable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="private_coach">
+              <PropertyRef Name="private_coach_id" />
+            </Principal>
+            <Dependent Role="coach_timetable">
+              <PropertyRef Name="private_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+      warning 6013: The table/view 'gym.dbo.coach_review' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="coach_review">
+        <Property Name="coach_review_id" Type="int" />
+        <Property Name="coach_id" Type="int" />
+        <Property Name="member_id" Type="int" />
+      </EntityType>-->
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="gymModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="gymEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="administrators" EntityType="gymModel.administrator" />
+          <EntitySet Name="branches" EntityType="gymModel.branch" />
+          <EntitySet Name="classes" EntityType="gymModel.class" />
+          <EntitySet Name="class_review" EntityType="gymModel.class_review" />
+          <EntitySet Name="class_type" EntityType="gymModel.class_type" />
+          <EntitySet Name="coaches" EntityType="gymModel.coach" />
+          <EntitySet Name="coach_speciality" EntityType="gymModel.coach_speciality" />
+          <EntitySet Name="customers" EntityType="gymModel.customer" />
+          <EntitySet Name="customer_pay_class" EntityType="gymModel.customer_pay_class" />
+          <EntitySet Name="fitness_information" EntityType="gymModel.fitness_information" />
+          <EntitySet Name="floor_coach" EntityType="gymModel.floor_coach" />
+          <EntitySet Name="guests" EntityType="gymModel.guest" />
+          <EntitySet Name="members" EntityType="gymModel.member" />
+          <EntitySet Name="payments" EntityType="gymModel.payment" />
+          <EntitySet Name="people" EntityType="gymModel.person" />
+          <EntitySet Name="person_phonenumber" EntityType="gymModel.person_phonenumber" />
+          <EntitySet Name="private_coach" EntityType="gymModel.private_coach" />
+          <EntitySet Name="receptionists" EntityType="gymModel.receptionist" />
+          <EntitySet Name="reviews" EntityType="gymModel.review" />
+          <EntitySet Name="staffs" EntityType="gymModel.staff" />
+          <EntitySet Name="timetables" EntityType="gymModel.timetable" />
+          <AssociationSet Name="FK__administr__admin__286302EC" Association="gymModel.FK__administr__admin__286302EC">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="administrator" EntitySet="administrators" />
+          </AssociationSet>
+          <AssociationSet Name="fk_admin_id" Association="gymModel.fk_admin_id">
+            <End Role="administrator" EntitySet="administrators" />
+            <End Role="branch" EntitySet="branches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__class__coach_id__5535A963" Association="gymModel.FK__class__coach_id__5535A963">
+            <End Role="coach" EntitySet="coaches" />
+            <End Role="class" EntitySet="classes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id_2" Association="gymModel.fk_class_id_2">
+            <End Role="class" EntitySet="classes" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id_3" Association="gymModel.fk_class_id_3">
+            <End Role="class" EntitySet="classes" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_id2" Association="gymModel.fk_class_id2">
+            <End Role="class" EntitySet="classes" />
+            <End Role="class_type" EntitySet="class_type" />
+          </AssociationSet>
+          <AssociationSet Name="FK__class_rev__custo__60A75C0F" Association="gymModel.FK__class_rev__custo__60A75C0F">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="fk_class_review_id" Association="gymModel.fk_class_review_id">
+            <End Role="review" EntitySet="reviews" />
+            <End Role="class_review" EntitySet="class_review" />
+          </AssociationSet>
+          <AssociationSet Name="FK__coach__coach_id__22AA2996" Association="gymModel.FK__coach__coach_id__22AA2996">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="coach" EntitySet="coaches" />
+          </AssociationSet>
+          <AssociationSet Name="FK__floor_coa__floor__2B3F6F97" Association="gymModel.FK__floor_coa__floor__2B3F6F97">
+            <End Role="coach" EntitySet="coaches" />
+            <End Role="floor_coach" EntitySet="floor_coach" />
+          </AssociationSet>
+          <AssociationSet Name="FK__private_c__priva__2E1BDC42" Association="gymModel.FK__private_c__priva__2E1BDC42">
+            <End Role="coach" EntitySet="coaches" />
+            <End Role="private_coach" EntitySet="private_coach" />
+          </AssociationSet>
+          <AssociationSet Name="fk_coach_id" Association="gymModel.fk_coach_id">
+            <End Role="coach" EntitySet="coaches" />
+            <End Role="coach_speciality" EntitySet="coach_speciality" />
+          </AssociationSet>
+          <AssociationSet Name="FK__customer__custom__164452B1" Association="gymModel.FK__customer__custom__164452B1">
+            <End Role="person" EntitySet="people" />
+            <End Role="customer" EntitySet="customers" />
+          </AssociationSet>
+          <AssociationSet Name="FK__guest__guest_id__1A14E395" Association="gymModel.FK__guest__guest_id__1A14E395">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="guest" EntitySet="guests" />
+          </AssociationSet>
+          <AssociationSet Name="FK__member__member_i__1CF15040" Association="gymModel.FK__member__member_i__1CF15040">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="member" EntitySet="members" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment__custome__4AB81AF0" Association="gymModel.FK__payment__custome__4AB81AF0">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="payment" EntitySet="payments" />
+          </AssociationSet>
+          <AssociationSet Name="fk_customer_id" Association="gymModel.fk_customer_id">
+            <End Role="customer" EntitySet="customers" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="fk_payment_id" Association="gymModel.fk_payment_id">
+            <End Role="payment" EntitySet="payments" />
+            <End Role="customer_pay_class" EntitySet="customer_pay_class" />
+          </AssociationSet>
+          <AssociationSet Name="FK__fitness_i__membe__412EB0B6" Association="gymModel.FK__fitness_i__membe__412EB0B6">
+            <End Role="member" EntitySet="members" />
+            <End Role="fitness_information" EntitySet="fitness_information" />
+          </AssociationSet>
+          <AssociationSet Name="fk_coach" Association="gymModel.fk_coach">
+            <End Role="private_coach" EntitySet="private_coach" />
+            <End Role="member" EntitySet="members" />
+          </AssociationSet>
+          <AssociationSet Name="fk_receptionist" Association="gymModel.fk_receptionist">
+            <End Role="receptionist" EntitySet="receptionists" />
+            <End Role="member" EntitySet="members" />
+          </AssociationSet>
+          <AssociationSet Name="FK__payment__Recepti__49C3F6B7" Association="gymModel.FK__payment__Recepti__49C3F6B7">
+            <End Role="receptionist" EntitySet="receptionists" />
+            <End Role="payment" EntitySet="payments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__person_ph__perso__1FCDBCEB" Association="gymModel.FK__person_ph__perso__1FCDBCEB">
+            <End Role="person" EntitySet="people" />
+            <End Role="person_phonenumber" EntitySet="person_phonenumber" />
+          </AssociationSet>
+          <AssociationSet Name="FK__staff__staff_id__1367E606" Association="gymModel.FK__staff__staff_id__1367E606">
+            <End Role="person" EntitySet="people" />
+            <End Role="staff" EntitySet="staffs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__reception__recep__25869641" Association="gymModel.FK__reception__recep__25869641">
+            <End Role="staff" EntitySet="staffs" />
+            <End Role="receptionist" EntitySet="receptionists" />
+          </AssociationSet>
+          <AssociationSet Name="class_timetable" Association="gymModel.class_timetable">
+            <End Role="class" EntitySet="classes" />
+            <End Role="timetable" EntitySet="timetables" />
+          </AssociationSet>
+          <AssociationSet Name="coach_timetable" Association="gymModel.coach_timetable">
+            <End Role="timetable" EntitySet="timetables" />
+            <End Role="private_coach" EntitySet="private_coach" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="administrator">
+          <Key>
+            <PropertyRef Name="admin_id" />
+          </Key>
+          <Property Name="admin_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="staff" Relationship="gymModel.FK__administr__admin__286302EC" FromRole="administrator" ToRole="staff" />
+          <NavigationProperty Name="branches" Relationship="gymModel.fk_admin_id" FromRole="administrator" ToRole="branch" />
+        </EntityType>
+        <EntityType Name="branch">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="Int32" Nullable="false" />
+          <Property Name="branch_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="city" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="street" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="admin_id" Type="Int32" />
+          <NavigationProperty Name="administrator" Relationship="gymModel.fk_admin_id" FromRole="branch" ToRole="administrator" />
+        </EntityType>
+        <EntityType Name="class">
+          <Key>
+            <PropertyRef Name="class_id" />
+          </Key>
+          <Property Name="class_id" Type="Int32" Nullable="false" />
+          <Property Name="capacity" Type="Int32" />
+          <Property Name="class_level" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="coach_id" Type="Int32" />
+          <Property Name="class_name" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="coach" Relationship="gymModel.FK__class__coach_id__5535A963" FromRole="class" ToRole="coach" />
+          <NavigationProperty Name="customer_pay_class" Relationship="gymModel.fk_class_id_2" FromRole="class" ToRole="customer_pay_class" />
+          <NavigationProperty Name="class_review" Relationship="gymModel.fk_class_id_3" FromRole="class" ToRole="class_review" />
+          <NavigationProperty Name="class_type" Relationship="gymModel.fk_class_id2" FromRole="class" ToRole="class_type" />
+          <NavigationProperty Name="timetables" Relationship="gymModel.class_timetable" FromRole="class" ToRole="timetable" />
+        </EntityType>
+        <EntityType Name="class_review">
+          <Key>
+            <PropertyRef Name="class_review_id" />
+          </Key>
+          <Property Name="class_review_id" Type="Int32" Nullable="false" />
+          <Property Name="class_id" Type="Int32" />
+          <Property Name="customer_id" Type="Int32" />
+          <NavigationProperty Name="class" Relationship="gymModel.fk_class_id_3" FromRole="class_review" ToRole="class" />
+          <NavigationProperty Name="customer" Relationship="gymModel.FK__class_rev__custo__60A75C0F" FromRole="class_review" ToRole="customer" />
+          <NavigationProperty Name="review" Relationship="gymModel.fk_class_review_id" FromRole="class_review" ToRole="review" />
+        </EntityType>
+        <EntityType Name="class_type">
+          <Key>
+            <PropertyRef Name="class_id" />
+            <PropertyRef Name="class_type1" />
+          </Key>
+          <Property Name="class_id" Type="Int32" Nullable="false" />
+          <Property Name="class_type1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="class" Relationship="gymModel.fk_class_id2" FromRole="class_type" ToRole="class" />
+        </EntityType>
+        <EntityType Name="coach">
+          <Key>
+            <PropertyRef Name="coach_id" />
+          </Key>
+          <Property Name="coach_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="classes" Relationship="gymModel.FK__class__coach_id__5535A963" FromRole="coach" ToRole="class" />
+          <NavigationProperty Name="staff" Relationship="gymModel.FK__coach__coach_id__22AA2996" FromRole="coach" ToRole="staff" />
+          <NavigationProperty Name="floor_coach" Relationship="gymModel.FK__floor_coa__floor__2B3F6F97" FromRole="coach" ToRole="floor_coach" />
+          <NavigationProperty Name="private_coach" Relationship="gymModel.FK__private_c__priva__2E1BDC42" FromRole="coach" ToRole="private_coach" />
+          <NavigationProperty Name="coach_speciality" Relationship="gymModel.fk_coach_id" FromRole="coach" ToRole="coach_speciality" />
+        </EntityType>
+        <EntityType Name="coach_speciality">
+          <Key>
+            <PropertyRef Name="coach_id" />
+            <PropertyRef Name="speciality" />
+          </Key>
+          <Property Name="coach_id" Type="Int32" Nullable="false" />
+          <Property Name="speciality" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="coach" Relationship="gymModel.fk_coach_id" FromRole="coach_speciality" ToRole="coach" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="customer_id" />
+          </Key>
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="customer_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="class_review" Relationship="gymModel.FK__class_rev__custo__60A75C0F" FromRole="customer" ToRole="class_review" />
+          <NavigationProperty Name="person" Relationship="gymModel.FK__customer__custom__164452B1" FromRole="customer" ToRole="person" />
+          <NavigationProperty Name="guest" Relationship="gymModel.FK__guest__guest_id__1A14E395" FromRole="customer" ToRole="guest" />
+          <NavigationProperty Name="member" Relationship="gymModel.FK__member__member_i__1CF15040" FromRole="customer" ToRole="member" />
+          <NavigationProperty Name="payments" Relationship="gymModel.FK__payment__custome__4AB81AF0" FromRole="customer" ToRole="payment" />
+          <NavigationProperty Name="customer_pay_class" Relationship="gymModel.fk_customer_id" FromRole="customer" ToRole="customer_pay_class" />
+        </EntityType>
+        <EntityType Name="customer_pay_class">
+          <Key>
+            <PropertyRef Name="customer_id" />
+            <PropertyRef Name="class_id" />
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="customer_id" Type="Int32" Nullable="false" />
+          <Property Name="class_id" Type="Int32" Nullable="false" />
+          <Property Name="payment_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="class" Relationship="gymModel.fk_class_id_2" FromRole="customer_pay_class" ToRole="class" />
+          <NavigationProperty Name="customer" Relationship="gymModel.fk_customer_id" FromRole="customer_pay_class" ToRole="customer" />
+          <NavigationProperty Name="payment" Relationship="gymModel.fk_payment_id" FromRole="customer_pay_class" ToRole="payment" />
+        </EntityType>
+        <EntityType Name="fitness_information">
+          <Key>
+            <PropertyRef Name="info_id" />
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Name="info_id" Type="Int32" Nullable="false" />
+          <Property Name="weight_" Type="Int32" />
+          <Property Name="height" Type="Int32" />
+          <Property Name="goal_weight" Type="Int32" />
+          <Property Name="member_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="member" Relationship="gymModel.FK__fitness_i__membe__412EB0B6" FromRole="fitness_information" ToRole="member" />
+        </EntityType>
+        <EntityType Name="floor_coach">
+          <Key>
+            <PropertyRef Name="floor_coach_id" />
+          </Key>
+          <Property Name="floor_coach_id" Type="Int32" Nullable="false" />
+          <Property Name="salary" Type="Int32" />
+          <NavigationProperty Name="coach" Relationship="gymModel.FK__floor_coa__floor__2B3F6F97" FromRole="floor_coach" ToRole="coach" />
+        </EntityType>
+        <EntityType Name="guest">
+          <Key>
+            <PropertyRef Name="guest_id" />
+          </Key>
+          <Property Name="guest_id" Type="Int32" Nullable="false" />
+          <Property Name="guest_source" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="customer" Relationship="gymModel.FK__guest__guest_id__1A14E395" FromRole="guest" ToRole="customer" />
+        </EntityType>
+        <EntityType Name="member">
+          <Key>
+            <PropertyRef Name="member_id" />
+          </Key>
+          <Property Name="member_id" Type="Int32" Nullable="false" />
+          <Property Name="membership_start_date" Type="DateTime" Precision="0" />
+          <Property Name="membership_end_date" Type="DateTime" Precision="0" />
+          <Property Name="membership_renewable" Type="Boolean" />
+          <Property Name="membership_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="membership_cost" Type="Int32" />
+          <Property Name="private_coach_id" Type="Int32" />
+          <Property Name="Receptionist_id" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="gymModel.FK__member__member_i__1CF15040" FromRole="member" ToRole="customer" />
+          <NavigationProperty Name="fitness_information" Relationship="gymModel.FK__fitness_i__membe__412EB0B6" FromRole="member" ToRole="fitness_information" />
+          <NavigationProperty Name="private_coach" Relationship="gymModel.fk_coach" FromRole="member" ToRole="private_coach" />
+          <NavigationProperty Name="receptionist" Relationship="gymModel.fk_receptionist" FromRole="member" ToRole="receptionist" />
+        </EntityType>
+        <EntityType Name="payment">
+          <Key>
+            <PropertyRef Name="payment_id" />
+          </Key>
+          <Property Name="payment_id" Type="Int32" Nullable="false" />
+          <Property Name="method" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="date_" Type="DateTime" Precision="0" />
+          <Property Name="amount" Type="Single" />
+          <Property Name="Receptionist_id" Type="Int32" />
+          <Property Name="customer_id" Type="Int32" />
+          <NavigationProperty Name="customer" Relationship="gymModel.FK__payment__custome__4AB81AF0" FromRole="payment" ToRole="customer" />
+          <NavigationProperty Name="customer_pay_class" Relationship="gymModel.fk_payment_id" FromRole="payment" ToRole="customer_pay_class" />
+          <NavigationProperty Name="receptionist" Relationship="gymModel.FK__payment__Recepti__49C3F6B7" FromRole="payment" ToRole="receptionist" />
+        </EntityType>
+        <EntityType Name="person">
+          <Key>
+            <PropertyRef Name="person_id" />
+          </Key>
+          <Property Name="person_id" Type="Int32" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="passwordd" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="city" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="street" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="first_name" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="last_name" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="birthdate" Type="DateTime" Precision="0" />
+          <Property Name="person_type" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="customer" Relationship="gymModel.FK__customer__custom__164452B1" FromRole="person" ToRole="customer" />
+          <NavigationProperty Name="person_phonenumber" Relationship="gymModel.FK__person_ph__perso__1FCDBCEB" FromRole="person" ToRole="person_phonenumber" />
+          <NavigationProperty Name="staff" Relationship="gymModel.FK__staff__staff_id__1367E606" FromRole="person" ToRole="staff" />
+        </EntityType>
+        <EntityType Name="person_phonenumber">
+          <Key>
+            <PropertyRef Name="person_id" />
+            <PropertyRef Name="phonenumber" />
+          </Key>
+          <Property Name="person_id" Type="Int32" Nullable="false" />
+          <Property Name="phonenumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="person" Relationship="gymModel.FK__person_ph__perso__1FCDBCEB" FromRole="person_phonenumber" ToRole="person" />
+        </EntityType>
+        <EntityType Name="private_coach">
+          <Key>
+            <PropertyRef Name="private_coach_id" />
+          </Key>
+          <Property Name="private_coach_id" Type="Int32" Nullable="false" />
+          <Property Name="session_price" Type="Int32" />
+          <NavigationProperty Name="coach" Relationship="gymModel.FK__private_c__priva__2E1BDC42" FromRole="private_coach" ToRole="coach" />
+          <NavigationProperty Name="members" Relationship="gymModel.fk_coach" FromRole="private_coach" ToRole="member" />
+          <NavigationProperty Name="timetables" Relationship="gymModel.coach_timetable" FromRole="private_coach" ToRole="timetable" />
+        </EntityType>
+        <EntityType Name="receptionist">
+          <Key>
+            <PropertyRef Name="receptionist_id" />
+          </Key>
+          <Property Name="receptionist_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="members" Relationship="gymModel.fk_receptionist" FromRole="receptionist" ToRole="member" />
+          <NavigationProperty Name="payments" Relationship="gymModel.FK__payment__Recepti__49C3F6B7" FromRole="receptionist" ToRole="payment" />
+          <NavigationProperty Name="staff" Relationship="gymModel.FK__reception__recep__25869641" FromRole="receptionist" ToRole="staff" />
+        </EntityType>
+        <EntityType Name="review">
+          <Key>
+            <PropertyRef Name="review_id" />
+          </Key>
+          <Property Name="review_id" Type="Int32" Nullable="false" />
+          <Property Name="rating" Type="Int32" />
+          <Property Name="comment" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="class_review" Relationship="gymModel.fk_class_review_id" FromRole="review" ToRole="class_review" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staff_id" />
+          </Key>
+          <Property Name="staff_id" Type="Int32" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="administrator" Relationship="gymModel.FK__administr__admin__286302EC" FromRole="staff" ToRole="administrator" />
+          <NavigationProperty Name="coach" Relationship="gymModel.FK__coach__coach_id__22AA2996" FromRole="staff" ToRole="coach" />
+          <NavigationProperty Name="person" Relationship="gymModel.FK__staff__staff_id__1367E606" FromRole="staff" ToRole="person" />
+          <NavigationProperty Name="receptionist" Relationship="gymModel.FK__reception__recep__25869641" FromRole="staff" ToRole="receptionist" />
+        </EntityType>
+        <EntityType Name="timetable">
+          <Key>
+            <PropertyRef Name="timetable_id" />
+          </Key>
+          <Property Name="timetable_id" Type="Int32" Nullable="false" />
+          <Property Name="next_date" Type="DateTime" Precision="0" />
+          <Property Name="week_day" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="start_time" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="end_time" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="classes" Relationship="gymModel.class_timetable" FromRole="timetable" ToRole="class" />
+          <NavigationProperty Name="private_coach" Relationship="gymModel.coach_timetable" FromRole="timetable" ToRole="private_coach" />
+        </EntityType>
+        <Association Name="FK__administr__admin__286302EC">
+          <End Role="staff" Type="gymModel.staff" Multiplicity="1" />
+          <End Role="administrator" Type="gymModel.administrator" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="administrator">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_admin_id">
+          <End Role="administrator" Type="gymModel.administrator" Multiplicity="0..1" />
+          <End Role="branch" Type="gymModel.branch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="administrator">
+              <PropertyRef Name="admin_id" />
+            </Principal>
+            <Dependent Role="branch">
+              <PropertyRef Name="admin_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__class__coach_id__5535A963">
+          <End Role="coach" Type="gymModel.coach" Multiplicity="0..1" />
+          <End Role="class" Type="gymModel.class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="class">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id_2">
+          <End Role="class" Type="gymModel.class" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id_3">
+          <End Role="class" Type="gymModel.class" Multiplicity="0..1" />
+          <End Role="class_review" Type="gymModel.class_review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_id2">
+          <End Role="class" Type="gymModel.class" Multiplicity="1" />
+          <End Role="class_type" Type="gymModel.class_type" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="class">
+              <PropertyRef Name="class_id" />
+            </Principal>
+            <Dependent Role="class_type">
+              <PropertyRef Name="class_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__class_rev__custo__60A75C0F">
+          <End Role="customer" Type="gymModel.customer" Multiplicity="0..1" />
+          <End Role="class_review" Type="gymModel.class_review" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_class_review_id">
+          <End Role="review" Type="gymModel.review" Multiplicity="1" />
+          <End Role="class_review" Type="gymModel.class_review" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="review">
+              <PropertyRef Name="review_id" />
+            </Principal>
+            <Dependent Role="class_review">
+              <PropertyRef Name="class_review_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__coach__coach_id__22AA2996">
+          <End Role="staff" Type="gymModel.staff" Multiplicity="1" />
+          <End Role="coach" Type="gymModel.coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__floor_coa__floor__2B3F6F97">
+          <End Role="coach" Type="gymModel.coach" Multiplicity="1" />
+          <End Role="floor_coach" Type="gymModel.floor_coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="floor_coach">
+              <PropertyRef Name="floor_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__private_c__priva__2E1BDC42">
+          <End Role="coach" Type="gymModel.coach" Multiplicity="1" />
+          <End Role="private_coach" Type="gymModel.private_coach" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="private_coach">
+              <PropertyRef Name="private_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_coach_id">
+          <End Role="coach" Type="gymModel.coach" Multiplicity="1" />
+          <End Role="coach_speciality" Type="gymModel.coach_speciality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="coach">
+              <PropertyRef Name="coach_id" />
+            </Principal>
+            <Dependent Role="coach_speciality">
+              <PropertyRef Name="coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__customer__custom__164452B1">
+          <End Role="person" Type="gymModel.person" Multiplicity="1" />
+          <End Role="customer" Type="gymModel.customer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__guest__guest_id__1A14E395">
+          <End Role="customer" Type="gymModel.customer" Multiplicity="1" />
+          <End Role="guest" Type="gymModel.guest" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="guest">
+              <PropertyRef Name="guest_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__member__member_i__1CF15040">
+          <End Role="customer" Type="gymModel.customer" Multiplicity="1" />
+          <End Role="member" Type="gymModel.member" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment__custome__4AB81AF0">
+          <End Role="customer" Type="gymModel.customer" Multiplicity="0..1" />
+          <End Role="payment" Type="gymModel.payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="payment">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_customer_id">
+          <End Role="customer" Type="gymModel.customer" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customer">
+              <PropertyRef Name="customer_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="customer_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_payment_id">
+          <End Role="payment" Type="gymModel.payment" Multiplicity="1" />
+          <End Role="customer_pay_class" Type="gymModel.customer_pay_class" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="payment">
+              <PropertyRef Name="payment_id" />
+            </Principal>
+            <Dependent Role="customer_pay_class">
+              <PropertyRef Name="payment_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__fitness_i__membe__412EB0B6">
+          <End Role="member" Type="gymModel.member" Multiplicity="1" />
+          <End Role="fitness_information" Type="gymModel.fitness_information" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="member">
+              <PropertyRef Name="member_id" />
+            </Principal>
+            <Dependent Role="fitness_information">
+              <PropertyRef Name="member_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_coach">
+          <End Role="private_coach" Type="gymModel.private_coach" Multiplicity="0..1" />
+          <End Role="member" Type="gymModel.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="private_coach">
+              <PropertyRef Name="private_coach_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="private_coach_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_receptionist">
+          <End Role="receptionist" Type="gymModel.receptionist" Multiplicity="0..1" />
+          <End Role="member" Type="gymModel.member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Principal>
+            <Dependent Role="member">
+              <PropertyRef Name="Receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__payment__Recepti__49C3F6B7">
+          <End Role="receptionist" Type="gymModel.receptionist" Multiplicity="0..1" />
+          <End Role="payment" Type="gymModel.payment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Principal>
+            <Dependent Role="payment">
+              <PropertyRef Name="Receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__person_ph__perso__1FCDBCEB">
+          <End Role="person" Type="gymModel.person" Multiplicity="1" />
+          <End Role="person_phonenumber" Type="gymModel.person_phonenumber" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="person_phonenumber">
+              <PropertyRef Name="person_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__staff__staff_id__1367E606">
+          <End Role="person" Type="gymModel.person" Multiplicity="1" />
+          <End Role="staff" Type="gymModel.staff" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="person">
+              <PropertyRef Name="person_id" />
+            </Principal>
+            <Dependent Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__reception__recep__25869641">
+          <End Role="staff" Type="gymModel.staff" Multiplicity="1" />
+          <End Role="receptionist" Type="gymModel.receptionist" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="staff">
+              <PropertyRef Name="staff_id" />
+            </Principal>
+            <Dependent Role="receptionist">
+              <PropertyRef Name="receptionist_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="class_timetable">
+          <End Role="class" Type="gymModel.class" Multiplicity="*" />
+          <End Role="timetable" Type="gymModel.timetable" Multiplicity="*" />
+        </Association>
+        <Association Name="coach_timetable">
+          <End Role="timetable" Type="gymModel.timetable" Multiplicity="*" />
+          <End Role="private_coach" Type="gymModel.private_coach" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="gymModelStoreContainer" CdmEntityContainer="gymEntities">
+          <EntitySetMapping Name="administrators">
+            <EntityTypeMapping TypeName="gymModel.administrator">
+              <MappingFragment StoreEntitySet="administrator">
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="branches">
+            <EntityTypeMapping TypeName="gymModel.branch">
+              <MappingFragment StoreEntitySet="branch">
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="classes">
+            <EntityTypeMapping TypeName="gymModel.class">
+              <MappingFragment StoreEntitySet="class">
+                <ScalarProperty Name="class_id" ColumnName="class_id" />
+                <ScalarProperty Name="capacity" ColumnName="capacity" />
+                <ScalarProperty Name="class_level" ColumnName="class_level" />
+                <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+                <ScalarProperty Name="class_name" ColumnName="class_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="class_review">
+            <EntityTypeMapping TypeName="gymModel.class_review">
+              <MappingFragment StoreEntitySet="class_review">
+                <ScalarProperty Name="class_review_id" ColumnName="class_review_id" />
+                <ScalarProperty Name="class_id" ColumnName="class_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="class_type">
+            <EntityTypeMapping TypeName="gymModel.class_type">
+              <MappingFragment StoreEntitySet="class_type">
+                <ScalarProperty Name="class_id" ColumnName="class_id" />
+                <ScalarProperty Name="class_type1" ColumnName="class_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="coaches">
+            <EntityTypeMapping TypeName="gymModel.coach">
+              <MappingFragment StoreEntitySet="coach">
+                <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="coach_speciality">
+            <EntityTypeMapping TypeName="gymModel.coach_speciality">
+              <MappingFragment StoreEntitySet="coach_speciality">
+                <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+                <ScalarProperty Name="speciality" ColumnName="speciality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customers">
+            <EntityTypeMapping TypeName="gymModel.customer">
+              <MappingFragment StoreEntitySet="customer">
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="customer_type" ColumnName="customer_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customer_pay_class">
+            <EntityTypeMapping TypeName="gymModel.customer_pay_class">
+              <MappingFragment StoreEntitySet="customer_pay_class">
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+                <ScalarProperty Name="class_id" ColumnName="class_id" />
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="fitness_information">
+            <EntityTypeMapping TypeName="gymModel.fitness_information">
+              <MappingFragment StoreEntitySet="fitness_information">
+                <ScalarProperty Name="info_id" ColumnName="info_id" />
+                <ScalarProperty Name="weight_" ColumnName="weight_" />
+                <ScalarProperty Name="height" ColumnName="height" />
+                <ScalarProperty Name="goal_weight" ColumnName="goal_weight" />
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="floor_coach">
+            <EntityTypeMapping TypeName="gymModel.floor_coach">
+              <MappingFragment StoreEntitySet="floor_coach">
+                <ScalarProperty Name="floor_coach_id" ColumnName="floor_coach_id" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="guests">
+            <EntityTypeMapping TypeName="gymModel.guest">
+              <MappingFragment StoreEntitySet="guest">
+                <ScalarProperty Name="guest_id" ColumnName="guest_id" />
+                <ScalarProperty Name="guest_source" ColumnName="guest_source" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="members">
+            <EntityTypeMapping TypeName="gymModel.member">
+              <MappingFragment StoreEntitySet="member">
+                <ScalarProperty Name="member_id" ColumnName="member_id" />
+                <ScalarProperty Name="membership_start_date" ColumnName="membership_start_date" />
+                <ScalarProperty Name="membership_end_date" ColumnName="membership_end_date" />
+                <ScalarProperty Name="membership_renewable" ColumnName="membership_renewable" />
+                <ScalarProperty Name="membership_type" ColumnName="membership_type" />
+                <ScalarProperty Name="membership_cost" ColumnName="membership_cost" />
+                <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+                <ScalarProperty Name="Receptionist_id" ColumnName="Receptionist_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="payments">
+            <EntityTypeMapping TypeName="gymModel.payment">
+              <MappingFragment StoreEntitySet="payment">
+                <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+                <ScalarProperty Name="method" ColumnName="method" />
+                <ScalarProperty Name="date_" ColumnName="date_" />
+                <ScalarProperty Name="amount" ColumnName="amount" />
+                <ScalarProperty Name="Receptionist_id" ColumnName="Receptionist_id" />
+                <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="people">
+            <EntityTypeMapping TypeName="gymModel.person">
+              <MappingFragment StoreEntitySet="person">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="passwordd" ColumnName="passwordd" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="street" ColumnName="street" />
+                <ScalarProperty Name="first_name" ColumnName="first_name" />
+                <ScalarProperty Name="last_name" ColumnName="last_name" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="person_type" ColumnName="person_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="person_phonenumber">
+            <EntityTypeMapping TypeName="gymModel.person_phonenumber">
+              <MappingFragment StoreEntitySet="person_phonenumber">
+                <ScalarProperty Name="person_id" ColumnName="person_id" />
+                <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="private_coach">
+            <EntityTypeMapping TypeName="gymModel.private_coach">
+              <MappingFragment StoreEntitySet="private_coach">
+                <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+                <ScalarProperty Name="session_price" ColumnName="session_price" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="receptionists">
+            <EntityTypeMapping TypeName="gymModel.receptionist">
+              <MappingFragment StoreEntitySet="receptionist">
+                <ScalarProperty Name="receptionist_id" ColumnName="receptionist_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="reviews">
+            <EntityTypeMapping TypeName="gymModel.review">
+              <MappingFragment StoreEntitySet="review">
+                <ScalarProperty Name="review_id" ColumnName="review_id" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="comment" ColumnName="comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="gymModel.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+                <ScalarProperty Name="role" ColumnName="role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="timetables">
+            <EntityTypeMapping TypeName="gymModel.timetable">
+              <MappingFragment StoreEntitySet="timetable">
+                <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+                <ScalarProperty Name="next_date" ColumnName="next_date" />
+                <ScalarProperty Name="week_day" ColumnName="week_day" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="class_timetable" TypeName="gymModel.class_timetable" StoreEntitySet="class_timetable">
+            <EndProperty Name="class">
+              <ScalarProperty Name="class_id" ColumnName="class_id" />
+            </EndProperty>
+            <EndProperty Name="timetable">
+              <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="coach_timetable" TypeName="gymModel.coach_timetable" StoreEntitySet="coach_timetable">
+            <EndProperty Name="timetable">
+              <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+            </EndProperty>
+            <EndProperty Name="private_coach">
+              <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

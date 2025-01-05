@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="275e9ddd23334cd9baa4a0738b2a7c0a" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="gymModel.administrator" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.branch" Width="1.5" PointX="7.5" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.class" Width="1.5" PointX="7.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.class_review" Width="1.5" PointX="9.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.class_type" Width="1.5" PointX="9.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.coach" Width="1.5" PointX="5.25" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.coach_speciality" Width="1.5" PointX="7.5" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.customer" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.customer_pay_class" Width="1.5" PointX="14.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.fitness_information" Width="1.5" PointX="14.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.floor_coach" Width="1.5" PointX="7.5" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.guest" Width="1.5" PointX="5.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.member" Width="1.5" PointX="12.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.payment" Width="1.5" PointX="12.5" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.person" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.person_phonenumber" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.private_coach" Width="1.5" PointX="15" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.receptionist" Width="1.5" PointX="5.25" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.review" Width="1.5" PointX="7.5" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.staff" Width="1.5" PointX="3" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymModel.timetable" Width="1.5" PointX="9.75" PointY="19" IsExpanded="true" />
+        <AssociationConnector Association="gymModel.FK__administr__admin__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_admin_id" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__class__coach_id__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_class_id_2" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_class_id_3" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_class_id2" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__class_rev__custo__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_class_review_id" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__coach__coach_id__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__floor_coa__floor__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__private_c__priva__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_coach_id" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__customer__custom__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__guest__guest_id__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__member__member_i__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__payment__custome__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_customer_id" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_payment_id" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__fitness_i__membe__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_coach" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.fk_receptionist" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__payment__Recepti__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__person_ph__perso__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__staff__staff_id__1367E606" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.FK__reception__recep__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.class_timetable" ManuallyRouted="false" />
+        <AssociationConnector Association="gymModel.coach_timetable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
