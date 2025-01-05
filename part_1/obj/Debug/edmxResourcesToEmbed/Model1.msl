@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gymModelStoreContainer" CdmEntityContainer="gymEntities">
+    <EntitySetMapping Name="administrators">
+      <EntityTypeMapping TypeName="gymModel.administrator">
+        <MappingFragment StoreEntitySet="administrator">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="branches">
+      <EntityTypeMapping TypeName="gymModel.branch">
+        <MappingFragment StoreEntitySet="branch">
+          <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+          <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classes">
+      <EntityTypeMapping TypeName="gymModel.class">
+        <MappingFragment StoreEntitySet="class">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="class_level" ColumnName="class_level" />
+          <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+          <ScalarProperty Name="class_name" ColumnName="class_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_review">
+      <EntityTypeMapping TypeName="gymModel.class_review">
+        <MappingFragment StoreEntitySet="class_review">
+          <ScalarProperty Name="class_review_id" ColumnName="class_review_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_type">
+      <EntityTypeMapping TypeName="gymModel.class_type">
+        <MappingFragment StoreEntitySet="class_type">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="class_type1" ColumnName="class_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coaches">
+      <EntityTypeMapping TypeName="gymModel.coach">
+        <MappingFragment StoreEntitySet="coach">
+          <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="coach_speciality">
+      <EntityTypeMapping TypeName="gymModel.coach_speciality">
+        <MappingFragment StoreEntitySet="coach_speciality">
+          <ScalarProperty Name="coach_id" ColumnName="coach_id" />
+          <ScalarProperty Name="speciality" ColumnName="speciality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="gymModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="customer_type" ColumnName="customer_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer_pay_class">
+      <EntityTypeMapping TypeName="gymModel.customer_pay_class">
+        <MappingFragment StoreEntitySet="customer_pay_class">
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="fitness_information">
+      <EntityTypeMapping TypeName="gymModel.fitness_information">
+        <MappingFragment StoreEntitySet="fitness_information">
+          <ScalarProperty Name="info_id" ColumnName="info_id" />
+          <ScalarProperty Name="weight_" ColumnName="weight_" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="goal_weight" ColumnName="goal_weight" />
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="floor_coach">
+      <EntityTypeMapping TypeName="gymModel.floor_coach">
+        <MappingFragment StoreEntitySet="floor_coach">
+          <ScalarProperty Name="floor_coach_id" ColumnName="floor_coach_id" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guests">
+      <EntityTypeMapping TypeName="gymModel.guest">
+        <MappingFragment StoreEntitySet="guest">
+          <ScalarProperty Name="guest_id" ColumnName="guest_id" />
+          <ScalarProperty Name="guest_source" ColumnName="guest_source" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="members">
+      <EntityTypeMapping TypeName="gymModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="member_id" ColumnName="member_id" />
+          <ScalarProperty Name="membership_start_date" ColumnName="membership_start_date" />
+          <ScalarProperty Name="membership_end_date" ColumnName="membership_end_date" />
+          <ScalarProperty Name="membership_renewable" ColumnName="membership_renewable" />
+          <ScalarProperty Name="membership_type" ColumnName="membership_type" />
+          <ScalarProperty Name="membership_cost" ColumnName="membership_cost" />
+          <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+          <ScalarProperty Name="Receptionist_id" ColumnName="Receptionist_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="payments">
+      <EntityTypeMapping TypeName="gymModel.payment">
+        <MappingFragment StoreEntitySet="payment">
+          <ScalarProperty Name="payment_id" ColumnName="payment_id" />
+          <ScalarProperty Name="method" ColumnName="method" />
+          <ScalarProperty Name="date_" ColumnName="date_" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="Receptionist_id" ColumnName="Receptionist_id" />
+          <ScalarProperty Name="customer_id" ColumnName="customer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="people">
+      <EntityTypeMapping TypeName="gymModel.person">
+        <MappingFragment StoreEntitySet="person">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="passwordd" ColumnName="passwordd" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="street" ColumnName="street" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="person_type" ColumnName="person_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="person_phonenumber">
+      <EntityTypeMapping TypeName="gymModel.person_phonenumber">
+        <MappingFragment StoreEntitySet="person_phonenumber">
+          <ScalarProperty Name="person_id" ColumnName="person_id" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="private_coach">
+      <EntityTypeMapping TypeName="gymModel.private_coach">
+        <MappingFragment StoreEntitySet="private_coach">
+          <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+          <ScalarProperty Name="session_price" ColumnName="session_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="receptionists">
+      <EntityTypeMapping TypeName="gymModel.receptionist">
+        <MappingFragment StoreEntitySet="receptionist">
+          <ScalarProperty Name="receptionist_id" ColumnName="receptionist_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reviews">
+      <EntityTypeMapping TypeName="gymModel.review">
+        <MappingFragment StoreEntitySet="review">
+          <ScalarProperty Name="review_id" ColumnName="review_id" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffs">
+      <EntityTypeMapping TypeName="gymModel.staff">
+        <MappingFragment StoreEntitySet="staff">
+          <ScalarProperty Name="staff_id" ColumnName="staff_id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="timetables">
+      <EntityTypeMapping TypeName="gymModel.timetable">
+        <MappingFragment StoreEntitySet="timetable">
+          <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+          <ScalarProperty Name="next_date" ColumnName="next_date" />
+          <ScalarProperty Name="week_day" ColumnName="week_day" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="class_timetable" TypeName="gymModel.class_timetable" StoreEntitySet="class_timetable">
+      <EndProperty Name="class">
+        <ScalarProperty Name="class_id" ColumnName="class_id" />
+      </EndProperty>
+      <EndProperty Name="timetable">
+        <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="coach_timetable" TypeName="gymModel.coach_timetable" StoreEntitySet="coach_timetable">
+      <EndProperty Name="timetable">
+        <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+      </EndProperty>
+      <EndProperty Name="private_coach">
+        <ScalarProperty Name="private_coach_id" ColumnName="private_coach_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
