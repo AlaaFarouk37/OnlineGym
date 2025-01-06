@@ -1,5 +1,4 @@
 
-The goal of this project is to design and implement a Gym Management System using SQL Server (T-SQL). The system will manage members (customers), staff (receptionists, admins), coaches, and classes in a database. The system will include role-based access, where admins manage all aspects of the gym (e.g., memberships, staff, schedules, and classes), receptionists handle customer registrations and payments, and members can book classes, view their schedule, and access their membership details.
 primary users: Admins, Receptionists, and Members (Customers).
 Technologies used:T-SQL, ADO.NET, C#, OOP, Data structures.
 Project Features:
